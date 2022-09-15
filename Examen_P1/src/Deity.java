@@ -2,32 +2,27 @@ import java.util.LinkedList;
 
 public class Deity {
 
-    String name;
-    String descripcion;
-    Deity(String name, String descripcion) {
-        this.name = name;
-        this.descripcion = descripcion;
-
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
+    private String name;
+    private String description;
+    private LinkedList<Deity> parents;
+    public Deity(String name, String description){
+        this.name=name;
+        this.description=description;
+        parents=new LinkedList<>();
     }
 
     public void addParent(Deity deity){
-
+        parents.add(deity);
     }
 
-
-    public Object getDescription() {
-        return  descripcion;
+    public String getName(){
+        return name;
+    }
+    public String getDescription(){
+        return description;
     }
 
-    public LinkedList<Deity> getParents() {
-        return LinkedList;
+    public LinkedList<Deity> getParents(){
+        return parents;
     }
 }

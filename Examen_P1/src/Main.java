@@ -50,7 +50,7 @@ public class Main {
 
         System.out.println("-------------------------------");
 
-        List<Deity> deities = culture.getDeities();
+        LinkedList<Deity> deities = culture.getDeities();
 
         for (Deity deity : deities) {
             System.out.println(String.format("%s >> %s", deity.getName(), deity.getDescription()) );
